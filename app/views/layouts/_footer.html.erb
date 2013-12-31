@@ -1,0 +1,28 @@
+<!-- Footer -->
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Alex J Meyers</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li> <%= link_to 'Download my resume', 'Alexander J Meyers - Resume.pdf', :target=> '_blank' %></li>
+            <li><a href="#" data-reveal-id="new_year_modal" data-reveal>Click me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<div id="new_year_modal" class="reveal-modal" data-reveal>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= image_tag('new_year.jpg', alt:"happy new year") %>
+    </div>
+
+  <a class="close-reveal-modal">&#215;</a>
+</div>
