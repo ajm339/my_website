@@ -5,8 +5,9 @@
 		 <div>
 		 	<%= link_to 'Back', blog_path %>
 		 </div>
-		 <%= render :partial => @post %>
-
+		 <div class="padding">
+		 	<%= render :partial => @post %>
+		 </div>
 		 <div class="padding">
 			 <%= link_to 'Edit', edit_post_path(@post) %> |
 			 <%= link_to 'Back', blog_path %> |
