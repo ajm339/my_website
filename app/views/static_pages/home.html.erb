@@ -1,33 +1,53 @@
-<% provide(:title, 'Alex J Meyers Home') %>  
+<% provide(:title, 'Alex J Meyers') %>  
   <div class="row">
- 
-    <!-- Main Blog Content -->
-    <div class="large-12 columns" role="content">
- 
-      <article class="padding">
- 
-        <h3>A little about what I am doing right now</h3>
-        <h6>Written by Alex Meyers on December 31, 2013.</h6>
- 
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Right now I am in the midst of working with a great team of Cornellians to create a new social media platform called daapr.  Our goal is to build an environment which strives to make all content social.</p>
-            <h5>So, what is daapr?</h5>
-            <p><a href="http://www.daapr.com" target="_blank">daapr</a> is a new platform that is changing the way we share and discover online. the site allows users to curate the web with a simple, dynamically updating feed that makes sharing links amongst friends easier and more fun than ever. we’ve only just begun our journey to make content social, and we’d love your support along the way.</p>
-          </div>
-          <div class="large-6 columns">
-            <a href="http://www.daapr.com" target="_blank" id="blogpic"><%= image_tag('daapr.png', alt:'daapr screenshot') %></a>
-          </div>
-        </div>
- 
-        <p class="padding">Unfortunately this website is pretty sparse at the moment.  I am currently working day and night to finalize the alpha release of daapr!  There are only two of us programming right now, myself and Connor Strynkowski, a very talented Comptuer Science major at Cornell.  We are looking forward to the addition of William Tyler Nebel to the programming team to help us speed up progress and gain some of his great insight.  Leading the business side of developing daapr is the very driven Aaron Schifrin.  Along with Aaron we have Austin Gage and Brendan Miller working tirelessly on business development for daapr.</p>
-
-        <p>My goal is to have a very complete personal website/blog up in the next week or so.  I am preparing to build this website using the power of <a href ="http://rubyonrails.org/">Ruby on Rails</a> and <a href="http://backbonejs.org/">Backbone.js</a> with the frontend framework <a href="http://foundation.zurb.com/">Foundation by Zurb</a>.  It is difficult because I am trying to balance developing daapr, this website, my family and learning so many new technologies, but I promise to have an exciting website that tells a bit about who I am along with a showcase of some of the new technologies I have leanred up within the next week or so.</p>
-
-        <p>Thanks for stopping by!</p>
- 
-      </article>
- 
+    <div class="large-12 columns padding">
+      <h1>Welcome to my personal website!<h1>
     </div>
- 
-    <!-- End Main Content -->
+  </div>
+  <div class="row">
+    <div class="large-12 columns padding">
+      <ul class="orbit" data-orbit>
+        <li>
+          <%= image_tag 'alaska.jpg' %>
+          <div class="orbit-caption">
+            My family and I travel to cool places like Alaska.
+          </div>
+        </li>
+        <li>
+          <%= image_tag 'hawaii.jpg' %>
+          <div class="orbit-caption">
+            We have also been to see Hawaii's volcanoes.
+          </div>
+        </li>
+        <li>
+          <%= image_tag 'hawaii2.jpg' %>
+          <div class="orbit-caption">
+            ...and Mauna Kea in Hawaii as well.
+          </div>
+        </li>
+        <li>
+          <div class="center">
+            <h2>Thanks for visiting my website!</h2>
+            <h2>Check out my <%= link_to 'blog', blog_path %> too.</h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row padding">
+    <div class="large-12 columns">
+      <h6 class="centertext">
+        Hey there.  My name is Alex Meyers and this is my personal website.
+      </h6>
+      <h6 class="centertext">
+        I am an Information Science Major at Cornell University graduating May 2015.
+      </h6>
+      <h6 class="centertext">
+        I am currently working on a cool new startup called <a href='www.daapr.com'>daapr</a>.
+      </h6>
+      <h6 class="centertext">
+        Feel free to email me at ajm339@cornell.edu
+      <h6>
+    </div>
+  </div>

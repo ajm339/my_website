@@ -1,20 +1,47 @@
- <p id="notice"><%= notice %></p>
+<% provide(:title, @post.title) %>  
+<div class="row">
+	<div class="large-12 columns">
+		 <p id="notice"><%= notice %></p>
 
-<%= render :partial => @post %>
+		 <%= render :partial => @post %>
 
- <%= link_to 'Edit', edit_post_path(@post) %> |
- <%= link_to 'Back', posts_path %>
+		 <div class="padding">
+			 <%= link_to 'Edit', edit_post_path(@post) %> |
+			 <%= link_to 'Back', blog_path %> |
+			 <%= link_to 'Delete', @post, method: :delete, data: { confirm: "Are you sure you want to delete this post? It cannot be undone." } %>
+		</div>
+	</div>
+</div>
 
-
-<h2>Comments</h2>
- <div id="comments">
-         <%= render :partial => @post.comments %>
- </div>
-
- <%= form_for [@post, Comment.new] do |f| %>
-        <p>
-                <%= f.label :body, "New comment" %><br/>
-                <%= f.text_area :body %>
-        </p>
-        <p><%= f.submit "Add comment" %></p>
-<% end %>
+<div class="row padding">
+	<div class="large-7 columns">
+		<h5>Comments</h5>
+		 <div id="comments">
+		         <%= render :partial => @post.comments %>
+		 </div>
+	</div>
+	<div class="large-5 columns">
+		<h5>New Comment:</h5>
+		<h6>Required=*</h6>
+		 <%= form_for([@post, Comment.new], data:{abide: ''}) do |f| %>
+		        <p>
+	                <div class="field">
+					    <%= f.label :name, "Name: *" %><br>
+					    <%= f.text_field :name, :required=> '', "required pattern" => "" %>
+					    <small class="error">Name is required</small>
+					 </div>
+					 <div class="field">
+					    <%= f.label :email, "Email: *" %><br>
+					    <%= f.text_field :email, :required=> '' %>
+					    <small class="error">Email is required</small>
+					 </div>
+					 <div class="field">
+					    <%= f.label :body, "Comment: *" %><br>
+					    <%= f.text_area :body, :required=> '', "required pattern" => "" %>
+					    <small class="error">Body is required</small>
+					 </div>
+		        </p>
+		        <%= f.submit "Add comment", class: "button right" %>
+		<% end %>
+	</div>
+</div>

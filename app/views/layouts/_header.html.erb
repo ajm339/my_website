@@ -2,27 +2,21 @@
   <nav class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
-        <h1><%= link_to 'alexjmeyers', root_url %></h1>
+
+        <h1><%= link_to image_tag('alexjmeyerslogosmall.png'), root_url %></h1>
       </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
     </ul>
 
-    <!-- <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <!-- <ul class="right">
-        <li class="active"><a href="#">Right Nav Button Active</a></li>
-        <li class="has-dropdown">
-          <a href="#">Right Button with Dropdown</a>
-          <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-          </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <%= link_to 'Home', root_url, class:'button' %>
         </li>
-      </ul> -->
-
-      <!-- Left Nav Section -->
-      <!-- <ul class="left">
-        <li><a href="#">Left Nav Button</a></li>
+        <li>
+          <%= link_to 'Blog', blog_path, class:'button' %>
+        </li>
       </ul>
-    </section> -->
+    </section>
   </nav>
 </div>
