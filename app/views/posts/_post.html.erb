@@ -10,11 +10,23 @@
     <h6>Written by Alex Meyers on <%= time_tag(post.created_at) %></h6>
 
     <div class="row">
-      <div class="large-6 columns">
-        <p><%= post.body %></p>
-      </div>
-      <div class="large-6 columns">
-        <%= link_to image_tag(post.image), post.url, :target=>'_blank' %>
-      </div>
+      <% if post.image.present? %>
+        <div class="large-7 columns">
+          <p>
+            <%= simple_format post.body %>
+            <%# paragraph = post.body.split( "\r\n" ) %>
+          </p>
+        </div>
+        <div class="large-5 columns">
+          <%= link_to image_tag(post.image), post.url, class: 'th [radius]', :target=>'_blank' %>
+        </div>
+      <% else %>
+        <div class="large-12 columns">
+          <p>
+            <%= simple_format post.body %>
+            <%# paragraph = post.body.split( "\r\n" ) %>
+          </p>
+        </div>
+      <% end %>
     </div>
 </article>
