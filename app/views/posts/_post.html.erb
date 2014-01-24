@@ -1,4 +1,11 @@
 <article>
+  <meta property="og:author" content="Alex Meyers"/>
+  <meta property="og:site_name" content="alexjmeyers"/>
+  <meta property="og:title" content="<%= post.title %>"/>
+  <% if post.image.present? %>
+    <meta property="og:image" content="<%= post.image %>"/>
+  <% end %>
+  <meta property="og:description" content="<%= post.body %>"/>
     <h3><%= link_to_unless_current post.title, post %></h3>
     <h6>Written by Alex Meyers on <%= time_tag(post.created_at) %></h6>
 
