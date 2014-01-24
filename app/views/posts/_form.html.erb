@@ -14,12 +14,12 @@
   <h6>Required = *</h6>
   <div class="field">
     <%= f.label 'Title*' %><br>
-    <%= f.text_field :title, :required=> '', "required pattern" => "" %>
+    <%= f.text_field :title, :required=> '', "required pattern" => "[a-zA-Z0-9]" %>
     <small class="error">Title is required</small>
   </div>
   <div class="field">
     <%= f.label 'Body*' %><br>
-    <%= f.text_area :body, :required=> '', "required pattern" => "" %>
+    <%= f.text_area :body, :required=> '', "required pattern" => "[a-zA-Z0-9]" %>
     <small class="error">Body is required</small>
   </div>
   <div class="field">
