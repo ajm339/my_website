@@ -72,10 +72,12 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :url, :image)
     end
+
+  protected
     
     def authenticate
         authenticate_or_request_with_http_basic do |name, password|
-            name == "Alex Meyers" && password == "skiUTAH20"
+            name == "Alex Meyers" && password == "thisismyblog"
         end
     end
 end

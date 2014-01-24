@@ -6,32 +6,34 @@
   </div>
   <div class="row">
     <div class="large-12 columns padding">
-      <ul class="orbit" data-orbit>
-        <li>
-          <%= image_tag 'alaska.jpg' %>
-          <div class="orbit-caption">
-            My family and I travel to cool places like Alaska.
-          </div>
-        </li>
-        <li>
-          <%= image_tag 'hawaii.jpg' %>
-          <div class="orbit-caption">
-            We have also been to see Hawaii's volcanoes.
-          </div>
-        </li>
-        <li>
-          <%= image_tag 'hawaii2.jpg' %>
-          <div class="orbit-caption">
-            ...and Mauna Kea in Hawaii as well.
-          </div>
-        </li>
-        <li>
-          <div class="center">
-            <h2>Thanks for visiting my website!</h2>
-            <h2>Check out my <%= link_to 'blog', blog_path %> too.</h2>
-          </div>
-        </li>
-      </ul>
+      <div class="show-for-medium-up">
+        <ul class="orbit" data-orbit>
+          <li>
+            <%= image_tag 'alaska.jpg' %>
+            <div class="orbit-caption">
+              My family and I travel to cool places like Alaska.
+            </div>
+          </li>
+          <li>
+            <%= image_tag 'hawaii.jpg' %>
+            <div class="orbit-caption">
+              We have also been to see Hawaii's volcanoes.
+            </div>
+          </li>
+          <li>
+            <%= image_tag 'hawaii2.jpg' %>
+            <div class="orbit-caption">
+              ...and Mauna Kea in Hawaii as well.
+            </div>
+          </li>
+          <li>
+            <div class="center">
+              <h2>Thanks for visiting my website!</h2>
+              <h2>Check out my <%= link_to 'blog', blog_path %> too.</h2>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

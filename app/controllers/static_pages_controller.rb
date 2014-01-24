@@ -3,6 +3,6 @@ class StaticPagesController < ApplicationController
     end
     
     def blog
-    	@posts = Post.all
+    	@posts = Post.order("id DESC").all
     end
 end
