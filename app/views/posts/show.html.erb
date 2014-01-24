@@ -32,12 +32,12 @@
 					 </div>
 					 <div class="field">
 					    <%= f.label :email, "Email: *" %><br>
-					    <%= f.text_field :email, :required=> '' %>
+					    <%= f.text_field :email, :required=> '', "required pattern" => "email" %>
 					    <small class="error">Email is required</small>
 					 </div>
 					 <div class="field">
 					    <%= f.label :body, "Comment: *" %><br>
-					    <%= f.text_area :body, :required=> '', "required pattern" => "" %>
+					    <%= f.text_area :body, :required=> '', "required pattern" => ""%>
 					    <small class="error">Body is required</small>
 					 </div>
 		        </p>
