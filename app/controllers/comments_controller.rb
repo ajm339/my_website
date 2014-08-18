@@ -8,8 +8,8 @@ class CommentsController < ApplicationController
 	      	@comment = @post.comments.create!(comment_params)
 	        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
 	        format.json { render action: 'show', status: :created, location: @post }
-          comment_email(@comment)
-          comment_notification_email(@comment)
+          UserMailer.comment_email(@comment)
+          #UserMailer.comment_notification_email(@comment)
 	      else
 	        format.html { redirect_to @post, notice: 'Comment was missing fields, it was not created.' }
 	        format.json { render json: @post.errors, status: :unprocessable_entity }
