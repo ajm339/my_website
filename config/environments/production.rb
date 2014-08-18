@@ -81,10 +81,10 @@ Blog::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-    :address => ,
+    :address => 'email-smtp.us-west-2.amazonaws.com',
     :authentication => :login,
-    :user_name => ,
-    :password => ,
+    :user_name => 'AKIAJBQEEHAFGEXHJSNA',
+    :password => 'Ao4AtTrWNNkEtqPUv9DSaT5CQIFN6SyTgURTLl2LeaEZ',
     :enable_starttls_auto => true,
     :port => 587
   }
