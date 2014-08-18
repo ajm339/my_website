@@ -33,3 +33,73 @@ a.button{
 	background-color:gray;
 }
 
+#subnav{
+  max-width: none;
+  background-color: #008CBA;
+}
+
+#subnav_content{
+  display:block;
+  margin:auto;
+  max-width:70em;
+}
+
+#pageTitle{
+  margin-left: -1%;
+  float:left;
+  color:#FFFFFF;
+  width:30%;
+  height:5%;
+}
+
+#showMenu{
+  float:right;
+}
+
+#menu_icon{
+  margin: 1em 0 0 0;
+  max-width: 2em;
+}
+
+.navigation_icon{
+  border:solid;
+  border-width: 0 0 2px 0;
+  border-color:#FFFFFF;
+  font-size:1.8em;
+  display:block;
+  margin:1em 0.5em;
+}
+
+#right_nav{
+  background-color: #E7E7E7;
+}
+
+iframe{
+  display: block;
+  margin:auto;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  #pageTitle{
+    width:30%;
+    height:10%;
+  }
+
+  #menu_icon{
+    margin: 0.5em;
+    max-width:1.5em;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  #pageTitle{
+    width:40%;
+    height:15%;
+  }
+
+  #menu_icon{
+    margin: 0.2em;
+    max-width: 1.5em;
+  }
+}
+

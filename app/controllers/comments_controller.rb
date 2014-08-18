@@ -14,6 +14,17 @@ class CommentsController < ApplicationController
 	      end
 	    end
     end
+
+    def show
+    end
+
+    def destroy
+      @comment.destroy
+      respond_to do |format|
+        format.html { redirect_to blog_path }
+        format.json { head :no_content }
+      end
+    end
     
     
     def comment_params

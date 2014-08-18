@@ -1,6 +1,5 @@
-<% provide(:title, 'Alex J Meyers') %>  
   <div class="row">
-    <div class="large-12 columns padding">
+    <div class="large-12 columns">
       <h1>Welcome to my personal website!<h1>
     </div>
   </div>
@@ -8,6 +7,17 @@
     <div class="large-12 columns padding">
       <div class="show-for-medium-up">
         <ul class="orbit" data-orbit>
+          <li>
+            <%= image_tag 'daapr_team.jpg' %>
+            <div class="orbit-caption">
+              The Daapr Team
+            </div>
+          </li>
+          <li>
+            <div class="center">
+              <h2>Check out my Amazon Web Services <%= link_to 'Guide', amazon_web_services_guide_path%>.</h2>
+            </div>
+          </li>
           <li>
             <%= image_tag 'zipline.jpg' %>
             <div class="orbit-caption">
@@ -17,13 +27,7 @@
           <li>
             <%= image_tag 'alaska.jpg' %>
             <div class="orbit-caption">
-              My family and I travel to cool places like Alaska.
-            </div>
-          </li>
-          <li>
-            <%= image_tag 'hawaii.jpg' %>
-            <div class="orbit-caption">
-              We have also been to see Hawaii's volcanoes.
+              My family and I travel to cool places like Alaska...
             </div>
           </li>
           <li>

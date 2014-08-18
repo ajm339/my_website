@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   before_filter :authenticate, :except => [ :index, :show ]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def admin
+    redirect_to blog_path
+  end
   # GET /posts
   # GET /posts.json
   def index
@@ -77,7 +80,7 @@ class PostsController < ApplicationController
     
     def authenticate
         authenticate_or_request_with_http_basic do |name, password|
-            name == "Alex Meyers" && password == "thisismyblog"
+          session[:admin] = (name == "ajm339" && password == "Iusedtoplaysoccer20")
         end
     end
 end
