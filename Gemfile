@@ -6,6 +6,7 @@ gem 'rails'
 gem 'foundation-rails'
 
 gem 'newrelic_rpm'
+gem 'le'
 
 # Uncomment this line on OS X.
    gem 'growl', '1.0.3'
