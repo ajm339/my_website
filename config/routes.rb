@@ -7,6 +7,7 @@ Blog::Application.routes.draw do
     match '/blog',  to: 'static_pages#blog', via: 'get'
     match '/amazon_web_services_guide',  to: 'static_pages#aws_guide', via: 'get'
     match '/admin', to: 'posts#admin', via:'get'
+    match '/contact', to: 'contact#index', via: 'get'
 
     match '*path' => redirect('/404'), via: :get
 end

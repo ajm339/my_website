@@ -34,7 +34,7 @@ Blog::Application.configure do
       :user_name => 'AKIAJBQEEHAFGEXHJSNA',
       :password => 'Ao4AtTrWNNkEtqPUv9DSaT5CQIFN6SyTgURTLl2LeaEZ',
       :enable_starttls_auto => true,
-      :port => 465
+      :port => 25
   }
 
 end
